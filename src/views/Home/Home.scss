@@ -1,0 +1,115 @@
+.home {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+
+  // Dashboard Summary (Bloque)
+  &__dashboard-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+
+    .dashboard-summary__item {
+      background-color: #f9f9f9;
+      padding: 15px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+      &__title {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #333;
+      }
+
+      &__value {
+        font-size: 20px;
+        font-weight: bold;
+        color: #4caf50;
+      }
+    }
+  }
+
+  // Dashboard Charts (Bloque)
+  &__dashboard-charts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+
+    .dashboard-charts__chart {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+      &__title {
+        margin-bottom: 15px;
+        font-size: 18px;
+        color: #333;
+      }
+
+      &__placeholder {
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #bbb;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  // Quick Actions (Bloque)
+  &__quick-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    .quick-actions__button {
+      flex: 1;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      text-align: center;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #45a049;
+      }
+    }
+  }
+
+  // Alerts Section (Bloque)
+  &__alerts {
+    background-color: #fff3cd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    .alerts__title {
+      margin-top: 0;
+      font-size: 18px;
+      color: #856404;
+    }
+
+    .alerts__list {
+      list-style-type: none;
+      padding: 0;
+
+      .alerts__item {
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #856404;
+      }
+    }
+  }
+}
+
+

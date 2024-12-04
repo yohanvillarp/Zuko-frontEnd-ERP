@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+$header-background: linear-gradient(to right, #223046, #60A5FA);
+$icons-color: white;
+$nav-hover-color: rgb(238, 175, 202);
+$nav-link-color: white;
+$nav-hover-background: rgba(160, 220, 70, 0.1);
+$font-family-logo: 'Courier New', Courier, monospace;
+
+.header {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  background: $header-background;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease; // Transición suave para cualquier cambio
+
+  &__logo {
+    height: 60px;
+    width: 60px;
+
+    &--link {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      text-decoration: none;
+      color: $nav-link-color;
+      font-family: $font-family-logo;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $nav-hover-color;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    height: 100%;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    color: $nav-link-color;
+    transition: background 0.3s, color 0.3s;
+
+    &:hover {
+      color: $nav-hover-color;
+      background: $nav-hover-background;
+    }
+  }
+
+  &__user {
+    display: flex;
+    gap: 20px;
+
+    &-link {
+      color: $icons-color;
+      transition: color 0.3s;
+
+      &:hover {
+        color: rgb(119, 8, 174);
+      }
+    }
+  }
+
+  @media (max-width: 980px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    
+
+    &__logo {
+      margin-bottom: 10px;
+    }
+
+    &__nav-list {
+      width: 100%;
+      text-align: left;
+      gap: 20px;
+      margin-top: 10px;
+      
+    }
+
+    &__nav-link {
+      font-size: 16px;
+      padding: 8px 0;
+      width: 100%;
+      text-align: left;
+      
+    }
+
+    &__user {
+      width: 100%;
+      justify-content: space-around;
+      margin-top: 10px;
+    }
+  }
+
+}
+
+
